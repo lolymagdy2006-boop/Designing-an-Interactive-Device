@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptualization & User-Centric Design - Part 1</title>
+    <link rel="stylesheet" href="Designing an interactive device.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({startOnLoad: true});
+    </script>
+    <style>
+        /* Additional styles to match the Information System lecture style */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+        
+        th {
+            background-color: var(--bg-card-hover);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        code.inline-code {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: var(--accent-cyan);
+        }
+        .mermaid {
+            background-color: white !important;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        pre code {
+            display: block;
+            background-color: var(--bg-card);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html" class="home-link">
+        <img src="UNI Logo.jpeg" class="site-logo" alt="Information System Logo">
+        </a>
+        <h2>Designing an Interactive Device</h2>
+        <button id="themeToggle" class="theme-toggle">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <span>Toggle Theme</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="exit-link">Exit Course</a>
+
+        <header>
+            <div class="syllabus-label">Lecture 1</div>
+            <h1>Conceptualization & User-Centric Design</h1>
+            <p class="subtitle">Part 1</p>
+        </header>
+
+        <p>For the first 90 minutes of this course, we move away from the keyboard and focus on the architecture of the experience. The goal is to shift the students' mindset from "What features can I code?" to "What experience is the user having?"</p>
+
+        <div class="timeline-wrapper">
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h3 class="html-title"><b>Module 1.1: The Human-Centered Blueprint (1.5 Hours)</b></h3>
+                        <h4><b>I. The "User-First" Philosophy (20 Minutes)</b></h4>
+                        <p>We begin by addressing the core question: How to develop an interactive application that puts users at the center?</p>
+                        <p>The Shift: In traditional dev, the user adapts to the tool. In user-centric dev, the tool adapts to the user's mental models.</p>
+                        <p>Affordances & Signifiers: Theoretical look at how objects "tell" a user how to interact (e.g., a button that looks clickable vs. a hidden gesture).</p>
+                        <p>The Three Pillars:</p>
+                        <ul>
+                            <li>Utility: Does it solve the promotion / art / fun objective?</li>
+                            <li>Usability: Can the user navigate without frustration?</li>
+                            <li>Desirability: Does the aesthetic quality keep them engaged?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator purple-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>II. Identifying the Core Objective (25 Minutes)</b></h4>
+                        <p>Students must choose their path. A "device" for art is built differently than one for a product launch.</p>
+                        <p>The Creative Brief: Students define their project's primary goal.</p>
+                        <p>Artistic: Focus on emotion and unconventional interaction.</p>
+                        <p>In the realm of artistic interactive devices, the developer moves beyond traditional utility to prioritize emotional resonance and poetic engagement.</p>
+                        <p>Unlike commercial apps that seek the path of least resistance, artistic devices often employ unconventional interaction - using sensors, bio-data, or abstract physics - to challenge the user's expectations and create a sense of wonder or introspection.</p>
+                        <p>The "User-at-the-Center" philosophy here focuses on how the person feels while interacting with the medium; the code serves as a bridge between a physical gesture and a digital metaphor.</p>
+                        <p>Entertainment: Focus on "The Loop" (Challenge → Action → Reward).</p>
+                        <p>Promotion: Focus on clarity, brand identity, and the "Call to Action."</p>
+                        <p>In the context of entertainment, putting the user at the center means mastering the Engagement Loop, a psychological cycle designed to keep the participant in a state of "flow."</p>
+                        <p>This loop hinges on a clear, repeating sequence: a Challenge is presented (an obstacle, a puzzle, or a goal), the user performs an Action (a jump, a strategic choice, or a physical gesture), and the system provides an immediate, satisfying Reward (visual effects, progress, or points).</p>
+                        <p>Unlike artistic devices that may embrace ambiguity, entertainment-focused devices must provide high-clarity feedback to ensure the user feels powerful and competent.</p>
+                        <p>The developer's goal is to balance the difficulty of the challenge with the user's skill level, ensuring that the interaction feels like a "dialogue" where every input from the user results in a meaningful and entertaining output from the machine.</p>
+                        <p>Target Audience Personas: Briefly defining who the "User" is. Are they tech-savvy gamers or casual museum visitors?</p>
+                        <p>Defining a Target Audience Persona is the process of creating a "fictional profile" of your ideal user to guide every design decision.</p>
+                        <p>In a 30-hour sprint, this prevents junior developers from building for "everyone" and instead focuses them on specific needs: a tech-savvy gamer expects high-speed responsiveness, complex controls, and deep systems, whereas a casual museum visitor may only have 60 seconds to interact and requires an interface that is instantly intuitive without a tutorial.</p>
+                        <p>By identifying the user's age, tech-literacy, and physical environment (e.g., a quiet home vs. a noisy public gallery), students can tailor the ergonomics and aesthetic quality of their device - ensuring the interaction feels natural rather than frustrating for that specific individual.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator green-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>III. Interaction Mapping (30 Minutes)</b></h4>
+                        <p>Before drawing screens, we map the User Journey.</p>
+                        <p>The Entry Point: How does the user know the device is interactive?</p>
+                        <p>The Interaction Loop: * Action: User moves, clicks, or speaks.</p>
+                        <p>Reaction: The system provides immediate feedback (sound, light, movement).</p>
+                        <p>The Exit Point: How does the experience conclude or reset for the next user?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>IV. Professional Issue: Scope vs. Vision (15 Minutes)</b></h4>
+                        <p>A "Professional Issue" discussion on Feasibility.</p>
+                        <p>The Developer's Trap: Junior devs often over-promise features (e.g., "A full VR RPG") and under-deliver on quality.</p>
+                        <p>The "One-In, One-Out" Rule: If you add a complex interaction (like voice recognition), you must simplify another area (like 3D assets) to maintain the 30-hour timeline.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator purple-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>Summary of Part 1 Deliverable</b></h4>
+                        <p>By the end of this 1.5-hour block, students will have a One-Page Concept Sheet containing:</p>
+                        <ul>
+                            <li>A 1-sentence "User Mission."</li>
+                            <li>A chosen tech stack (VR, 2D, or Immersive 3D).</li>
+                            <li>A rough "Journey Map" showing the start, middle, and end of the interaction.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator green-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>Recommended Software Stack</b></h4>
+                        <p>Regarding the software, because this course (SAE) allows for experimentation with different technologies (VR, 2D/3D games, immersive devices), the "stack" depends on the student's chosen path. Here are the recommended industry-standard tools:</p>
+                        <h5>1. Development & Engines (The Core)</h5>
+                        <ul>
+                            <li>Unity or Unreal Engine: The industry standards for 3D, Virtual Reality, and immersive devices. Unity is often preferred for junior developers due to its large documentation library.</li>
+                            <li>Visual Studio / VS Code: For scripting (C# for Unity, C++ for Unreal).</li>
+                            <li>Web Stack (Three.js / React Three Fiber): If students prefer developing browser-based interactive 3D experiences.</li>
+                        </ul>
+                        <h5>2. Design & Prototyping (The Aesthetics)</h5>
+                        <ul>
+                            <li>Figma: Essential for designing 2D interfaces (UI), mapping the user journey, and creating clickable wireframes before coding.</li>
+                            <li>Blender: The go-to free software for creating 3D models and environments.</li>
+                            <li>Adobe Creative Cloud (Photoshop/Illustrator): For textures, UI assets, and promotional graphics.</li>
+                        </ul>
+                        <h5>3. Audio & Interaction</h5>
+                        <ul>
+                            <li>Audacity or Reaper: For recording and editing "feedback" sounds (clicks, ambient hums, etc.).</li>
+                            <li>Pure Data (Pd) or Max/MSP: For students pursuing more "artistic" or experimental sound-based interactivity.</li>
+                        </ul>
+                        <h5>4. Professional Workflow</h5>
+                        <ul>
+                            <li>Git / GitHub: Essential for version control, allowing students to experiment without the risk of permanently breaking their code.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Designing an interactive device.js"></script>
+</body>
+</html>

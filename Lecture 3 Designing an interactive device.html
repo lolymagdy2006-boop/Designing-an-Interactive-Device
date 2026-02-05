@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptualization & User-Centric Design - Part 3</title>
+    <link rel="stylesheet" href="Designing an interactive device.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({startOnLoad: true});
+    </script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+        th {
+            background-color: var(--bg-card-hover);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        tr:last-child td { border-bottom: none; }
+        code.inline-code {
+            background-color: rgba(255,255,255,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: var(--accent-cyan);
+        }
+        pre code {
+            display: block;
+            background-color: var(--bg-card);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html" class="home-link">
+            <img src="UNI Logo.jpeg" class="site-logo" alt="Information System Logo">
+        </a>
+        <h2>Designing an Interactive Device</h2>
+        <button id="themeToggle" class="theme-toggle">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <span>Toggle Theme</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="exit-link">Exit Course</a>
+
+        <header>
+            <div class="syllabus-label">Lecture 3</div>
+            <h1>Conceptualization & User-Centric Design</h1>
+            <p class="subtitle">Part 3</p>
+        </header>
+
+        <div class="timeline-wrapper">
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <p>Now that the students have an idea and a target audience, we must focus on the <b>Standards of Excellence</b>:</p>
+                        <p>how to make the device usable (Ergonomics) and visually compelling (Aesthetics), while navigating the real-world constraints of a junior developer (Professional Issues).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator purple-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h3><b>Phase 1: Part 2 - Ergonomics, Aesthetics & Professional Issues (1.5 Hours)</b></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator green-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>I. Ergonomics: Designing for the Human Body (30 Minutes)</b></h4>
+                        <p>In interactive design, "ergonomics" isn't just about chairs; it’s about <b>Cognitive and Physical Load</b>.</p>
+                        <ul>
+                            <li><b>Physical Ergonomics:</b> If it's a VR project, are we making the user turn their neck too much? If it's a kiosk, is the button at a comfortable height?</li>
+                            <li><b>Cognitive Ergonomics:</b> Don't make the user think. Use <b>Signifiers</b> (visual cues) that show how to interact.</li>
+                            <li><i>Example:</i> A glowing object suggests "Touch me." A path of light suggests "Follow me."</li>
+                            <li><b>The 3-Second Rule:</b> A user should understand the basic interaction of the device within 3 seconds of standing in front of it.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>II. Aesthetic Quality: The Visual Language (30 Minutes)</b></h4>
+                        <p>Students often confuse "good graphics" with "high-budget assets." In a 30-hour course, aesthetic quality is about <b>Consistency</b>.</p>
+                        <ul>
+                            <li><b>Visual Cohesion:</b> Ensuring that colors, fonts, and 3D styles match the objective (e.g., a "Cyberpunk" art piece shouldn't have "Comic Sans" buttons).</li>
+                            <li><b>Feedback Loops:</b> Aesthetics are functional. High-quality feedback (a button that squashes when pressed, a sound that echoes) makes the device feel "expensive" and professional.</li>
+                            <li><b>Atmosphere:</b> Using lighting and post-processing to create "mood" without needing high-polygon models.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator purple-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>III. Professional Issues: The Junior Developer’s Reality (30 Minutes)</b></h4>
+                        <p>This is a critical discussion to prepare them for the <b>SAE (Situation d'Apprentissage et d'Évaluation)</b>.</p>
+                        <ul>
+                            <li><b>Scope Creep:</b> The #1 reason projects fail. Students must learn to "Cut the Tail"—identifying which 50% of their ideas are unnecessary for the core experience.</li>
+                            <li><b>Technical Debt:</b> Writing "messy" code to finish quickly will haunt them in Phase 3. We discuss the importance of naming variables and basic documentation.</li>
+                            <li><b>Intellectual Property (IP):</b> A professional issue regarding the use of "Free Assets." Where do they get 3D models/sounds legally? (e.g., Kenney.nl, Google Poly, or CC0 sounds).</li>
+                            <li><b>The Ethics of Attention:</b> Does the device respect the user’s time and senses, or is it overwhelming/disorienting?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator green-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>Summary of Phase 1 Deliverable</b></h4>
+                        <p>By the end of this block, the <b>One-Page Concept Sheet</b> should now be updated with:</p>
+                        <ol>
+                            <li>A <b>Moodboard</b> (3-5 images representing the aesthetic).</li>
+                            <li>A <b>Technical Constraint List</b> (What hardware are we using? Mouse? Meta Quest? Touchscreen?).</li>
+                            <li>A <b>Risk Assessment</b> (What is the hardest part to code?).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>Professional Checklist</b></h4>
+                        <p>Here the <b>Professional Checklist: Quality Standards</b> as a new note.</p>
+                        <p>This checklist serves as a roadmap for your students to evaluate their own work against the standards of <b>Ergonomics</b>, <b>Aesthetics</b>, and <b>Professionalism</b>. It ensures that as junior developers, they remain focused on the "User-at-the-Center" philosophy while managing the technical and ethical constraints of the project.</p>
+                        <p>Professional Checklist: Ergonomics, Aesthetics & Feasibility</p>
+                        <h3> Ergonomics & Accessibility</h3>
+                        <ul>
+                            <li>The 3-Second Rule: Is it immediately obvious how to start?</li>
+                            <li>Safe Zones: (For VR/3D) Are all interactive elements within the user's natural field of vision?</li>
+                            <li>Feedback: Does every user action have a clear visual or audio response (e.g., a "click" sound or a color change)?</li>
+                            <li>Simplicity: Is the user required to remember more than 3 steps at a time? (If yes, simplify).</li>
+                        </ul>
+                        <h3> Aesthetic Quality & Cohesion</h3>
+                        <ul>
+                            <li>Moodboard Alignment: Do the colors, fonts, and assets match the initial concept?</li>
+                            <li>Visual Hierarchy: Are the most important elements the largest or brightest?</li>
+                            <li>Consistency: Are all buttons, icons, and 3D assets in the same style?</li>
+                            <li>Polish: Is there basic lighting/shadowing or post-processing to create "atmosphere"?</li>
+                        </ul>
+                        <h3> Professionalism & Ethics</h3>
+                        <ul>
+                            <li>Legal Assets: Do you have the rights/licenses for all external assets (models, music, code)?</li>
+                            <li>Scope Control: Have you identified the "MVP" (Minimum Viable Product)?</li>
+                            <li>Error Prevention: If the user does something "wrong," does the application crash or guide them back?</li>
+                            <li>Ethical Design: Does the device avoid "dark patterns" or overwhelming sensory input?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Designing an interactive device.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptualization & User-Centric Design - Part 2</title>
+    <link rel="stylesheet" href="Designing an interactive device.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({startOnLoad: true});
+    </script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+        th {
+            background-color: var(--bg-card-hover);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        tr:last-child td { border-bottom: none; }
+        code.inline-code {
+            background-color: rgba(255,255,255,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: var(--accent-cyan);
+        }
+        pre code {
+            display: block;
+            background-color: var(--bg-card);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html" class="home-link">
+            <img src="UNI Logo.jpeg" class="site-logo" alt="Information System Logo">
+        </a>
+        <h2>Designing an Interactive Device</h2>
+        <button id="themeToggle" class="theme-toggle">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <span>Toggle Theme</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="exit-link">Exit Course</a>
+
+        <header>
+            <div class="syllabus-label">Lecture 2</div>
+            <h1>Conceptualization & User-Centric Design</h1>
+            <p class="subtitle">Part 2</p>
+        </header>
+
+        <div class="timeline-wrapper">
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h3 class="html-title"><b>In the Ideation Workshop</b></h3>
+                        <p>students transition from abstract theory to concrete project sparks.</p>
+                        <p>This is a high-energy collaborative session where the goal is quantity over quality initially, followed by a rigorous "professional filter."</p>
+                        <p>The workshop is divided by the three core objectives:</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator purple-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>1. Promotion: The Utility Perspective</b></h4>
+                        <p>Here, students brainstorm how an interactive device can "sell" or "showcase."</p>
+                        <ul>
+                            <li><b>The Goal:</b> Drive engagement toward a specific product or message.</li>
+                            <li><b>The Idea:</b> Instead of a static poster, how can a user "touch" a product in 3D?</li>
+                            <li><b>Interaction:</b> A "virtual try-on" or a 3D exploded view of a product triggered by hand gestures.</li>
+                            <li><b>The Professional Filter:</b> Does the interaction distract from the brand, or enhance it?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator green-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>2. Entertainment: The Play Perspective</b></h4>
+                        <p>Focusing on the "Fun Factor" and the mechanics of the experience.</p>
+                        <ul>
+                            <li><b>The Goal:</b> Pure engagement through challenge and satisfaction.</li>
+                            <li><b>The Idea:</b> Miniature 2D physics games or a VR "rhythm" challenge.</li>
+                            <li><b>Interaction:</b> High-speed input/output cycles where the user is tested on skill or timing.</li>
+                            <li><b>The Professional Filter:</b> Is the "Core Loop" (Challenge → Action → Reward) addictive and clear?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>3. Art: The Experiential Perspective</b></h4>
+                        <p>Exploring unconventional methods to evoke an emotional response.</p>
+                        <ul>
+                            <li><b>The Goal:</b> Expression, reflection, or sensory exploration.</li>
+                            <li><b>The Idea:</b> A digital "mirror" that distorts based on the user's movement or a soundscape that changes with the user's proximity.</li>
+                            <li><b>Interaction:</b> Abstract, non-linear, and often surprise-based.</li>
+                            <li><b>The Professional Filter:</b> Does the aesthetic quality match the emotional intent?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator purple-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>The "Speed Pitch" Technique</b></h4>
+                        <p>To wrap up the workshop, students perform a <b>Speed Pitch</b>:</p>
+                        <ol>
+                            <li><b>30 Seconds:</b> Present the idea.</li>
+                            <li><b>30 Seconds:</b> Identify the "User" (Persona).</li>
+                            <li><b>30 Seconds:</b> Defend the choice of technology (VR vs. 2D vs. 3D).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator green-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>Brainstorming Worksheet</b></h4>
+                        <p>Here we will create the <b>Student Brainstorming Worksheet</b> as a new note.</p>
+                        <p>This document is designed to guide students through the four critical stages of ideation:</p>
+                        <p>defining the objective, identifying the persona, mapping the interaction loop, and performing a technical reality check.</p>
+                        <p>You can now use this worksheet to facilitate the <b>Ideation Workshop</b> part of your course.</p>
+                        <p>Interactive Device Brainstorming Worksheet</p>
+
+                        <h5>STEP 1: The "What" (Core Objective)</h5>
+                        <ul>
+                            <li>Circle one: PROMOTION / ENTERTAINMENT / ART</li>
+                            <li>The Elevator Pitch: In two sentences, what does the device do?</li>
+                        </ul>
+
+                        <h5>STEP 2: The "Who" (Persona)</h5>
+                        <ul>
+                            <li>User Profile: Give them a name and a background (e.g., "Tech-savvy Tim" or "Museum-goer Martha").</li>
+                            <li>User Need: Why are they interacting with your device? (To be amazed? To learn? To compete?)</li>
+                        </ul>
+
+                        <h5>STEP 3: The "How" (Interaction Loop)</h5>
+                        <ul>
+                            <li>Action: What is the physical or digital trigger? (e.g., A wave, a click, a shout)</li>
+                            <li>Response: What is the immediate sensory feedback? (e.g., A flash, a sound, a 3D movement)</li>
+                            <li>The "Juice": One small detail to make the interaction feel "good" or "premium."</li>
+                        </ul>
+
+                        <h5>STEP 4: Technical Reality Check</h5>
+                        <ul>
+                            <li>Platform: 2D Web / 3D Immersive / Virtual Reality</li>
+                            <li>Required Skills: What do you need to learn in the next 10 hours to make this work?</li>
+                            <li>The MVP: If you only had 5 hours to code, what is the single most important feature?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Designing an interactive device.js"></script>
+</body>
+</html>

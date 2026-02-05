@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptualization & User-Centric Design - Part 4</title>
+    <link rel="stylesheet" href="Designing an interactive device.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({startOnLoad: true});
+    </script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+        th {
+            background-color: var(--bg-card-hover);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        tr:last-child td { border-bottom: none; }
+        code.inline-code {
+            background-color: rgba(255,255,255,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: var(--accent-cyan);
+        }
+        pre code {
+            display: block;
+            background-color: var(--bg-card);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html" class="home-link">
+            <img src="UNI Logo.jpeg" class="site-logo" alt="Information System Logo">
+        </a>
+        <h2>Designing an Interactive Device</h2>
+        <button id="themeToggle" class="theme-toggle">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <span>Toggle Theme</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="exit-link">Exit Course</a>
+
+        <header>
+            <div class="syllabus-label">Lecture 4</div>
+            <h1>Conceptualization & User-Centric Design</h1>
+            <p class="subtitle">Part 4</p>
+        </header>
+
+        <div class="timeline-wrapper">
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <p>This is the transition from "paper and ideas" to "code and assets."</p>
+                        <p>The goal of this phase is to build a "ugly but functional" version of the device to prove that the core interaction actually works.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator purple-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h3><b>Phase 2: Rapid Prototyping & Tech Selection</b></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator green-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>I. Selecting the Tech Stack (1.5 Hours)</b></h4>
+                        <p>Students choose their engine based on their <b>One-Page Concept Sheet</b>.</p>
+                        <ul>
+                            <li><b>The 3D/VR Path:</b> Unity or Unreal Engine. Best for spatial immersion.</li>
+                            <li><b>The 2D/Interactive Path:</b> Godot or Web-based frameworks (Three.js). Best for fast deployment and accessibility.</li>
+                            <li><b>Asset Pipeline Setup:</b> Students must establish a "Folder Structure."</li>
+                            <li><b>Professional Issue:</b> Inconsistent naming (e.g., final_v2_final.png) is the primary cause of project failure in junior teams.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>II. The "Grey-Box" Prototype (2 Hours)</b></h4>
+                        <p>We focus on <b>White-boxing</b> or <b>Grey-boxing</b>. Students build the environment using only primitive shapes (cubes, spheres).</p>
+                        <ul>
+                            <li><b>Objective:</b> If the experience isn't fun/interesting with just grey cubes, "better graphics" won't save it.</li>
+                            <li><b>Core Loop Implementation:</b> Coding the first interaction.</li>
+                            <li><b>Example:</b> If the user "waves," the cube should change color. If the user "clicks," the sphere should move.</li>
+                            <li><b>The User-Center Test:</b> Can a stranger understand what to do without textures or labels?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator purple-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>III. Aesthetic Asset Integration (1.5 Hours)</b></h4>
+                        <p>Once the "logic" is proven, we bring in the aesthetics.</p>
+                        <ul>
+                            <li><b>Importing Assets:</b> Bringing in models from Blender or UI from Figma.</li>
+                            <li><b>Lighting & Atmosphere:</b> Setting the mood. We use simple "Post-Processing" (Bloom, Color Grading) to create a high-quality feel without complex 3D modeling.</li>
+                            <li><b>Soundscapes:</b> Adding "Ear Candy." Every interaction needs a sound to feel "physical" to the user.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator green-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>IV. Paper Prototyping & Friction Points (1 Hour)</b></h4>
+                        <p>A "Theory-to-Practice" workshop.</p>
+                        <p><b>Testing Logic:</b> Students sketch their UI on paper and have a peer "interact" with it by pointing.</p>
+                        <p><b>Identifying Friction:</b> Where does the peer get stuck? Is the "Exit Point" clear?</p>
+                        <p><b>Professional Issue: Technical Debt.</b> If the prototype is too messy, we discuss "Refactoring"—cleaning up code before the 12-hour Sprint in Phase 3.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>Phase 2 Deliverable: The "Proof of Concept" (POC)</b></h4>
+                        <p>By the end of these 6 hours, the student should have:</p>
+                        <ul>
+                            <li>A <b>running build</b> of their application.</li>
+                            <li>One <b>functional interaction</b> (Input → Processing → Output).</li>
+                            <li>A <b>"Grey-box" environment</b> that defines the physical space.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-item">
+                <div class="indicator blue-glow"></div>
+                <div class="card">
+                    <div class="content-area">
+                        <h4><b>A "Tech Selection Guide" to help students decide which software (Unity vs. Web vs. Godot) is best for their specific project?</b></h4>
+                        <h5><b>Tech Selection Guide: Choosing Your Interactive Engine</b></h5>
+                        <p>Choosing the right tool depends on your Objective (Art, Promo, or Fun) and your Target Persona. Use this guide to decide.</p>
+                        <ol>
+                            <li><b>Unity (The All-Rounder)</b>
+                                <ul>
+                                    <li>Best For: Virtual Reality (VR), 3D Immersive Devices, Mobile AR.</li>
+                                    <li>Pros: Massive asset store, industry standard, excellent VR support.</li>
+                                    <li>Cons: Steeper learning curve (C#), larger file sizes.</li>
+                                    <li>Pick this if: You want to build a "professional grade" 3D experience or a VR piece.</li>
+                                </ul>
+                            </li>
+                            <li><b>Unreal Engine (The Visual Powerhouse)</b>
+                                <ul>
+                                    <li>Best For: High-end Artistic pieces, Photorealistic Product Promotion.</li>
+                                    <li>Pros: Best lighting and "out-of-the-box" aesthetic quality, Blueprint (visual coding) is great for non-coders.</li>
+                                    <li>Cons: High hardware requirements, heavy for simple 2D projects.</li>
+                                    <li>Pick this if: Aesthetic quality is your #1 priority and you have a powerful PC.</li>
+                                </ul>
+                            </li>
+                            <li><b>Web-Based (Three.js / Play Canvas)</b>
+                                <ul>
+                                    <li>Best For: Promotion, Wide Accessibility, 2D/3D Hybrid.</li>
+                                    <li>Pros: No installation required (runs in browser), easy to share via a link.</li>
+                                    <li>Cons: Performance is limited compared to native engines.</li>
+                                    <li>Pick this if: You want your project to be viewed by anyone, anywhere, instantly.</li>
+                                </ul>
+                            </li>
+                            <li><b>Godot (The Lightweight Choice)</b>
+                                <ul>
+                                    <li>Best For: 2D Games, Indie Art pieces, rapid 2D prototyping.</li>
+                                    <li>Pros: Extremely fast to open/build, open source, very beginner-friendly.</li>
+                                    <li>Cons: Smaller community/market share than Unity.</li>
+                                    <li>Pick this if: You are focusing on a 2D entertainment objective or have limited time.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Designing an interactive device.js"></script>
+</body>
+</html>
