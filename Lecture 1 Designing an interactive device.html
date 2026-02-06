@@ -58,6 +58,14 @@
             color: var(--text-main);
             border: 1px solid var(--border-color);
         }
+
+        ul {
+            list-style-type: disc; /* Optional: Restore default bullet points if needed */
+            padding-left: 20px;    /* Optional: Indent the list */
+        }
+        li {
+            margin-bottom: 10px;   /* Adds space between each list item; adjust as needed */
+       }
     </style>
 </head>
 <body>
@@ -94,17 +102,17 @@
             <p class="subtitle">Part 1</p>
         </header>
 
-        <p>For the first 90 minutes of this course, we move away from the keyboard and focus on the architecture of the experience. The goal is to shift the students' mindset from "What features can I code?" to "What experience is the user having?"</p>
+        <p>Today, we move away from the keyboard and focus on the architecture of the experience. The goal is to shift the our mindset from "What features can I code?" to "What experience is the user having?"</p>
 
         <div class="timeline-wrapper">
             <div class="lesson-item">
                 <div class="indicator blue-glow"></div>
                 <div class="card">
                     <div class="content-area">
-                        <h3 class="html-title"><b>Module 1.1: The Human-Centered Blueprint (1.5 Hours)</b></h3>
-                        <h4><b>I. The "User-First" Philosophy (20 Minutes)</b></h4>
+                        <h3 class="html-title"><b>Module 1.1: The Human-Centered Blueprint </b></h3>
+                        <h4><b>1. The "User-First" Philosophy </b></h4>
                         <p>We begin by addressing the core question: How to develop an interactive application that puts users at the center?</p>
-                        <p>The Shift: In traditional dev, the user adapts to the tool. In user-centric dev, the tool adapts to the user's mental models.</p>
+                        <p>The Shift: In traditional developing, the user adapts to the tool. In user-centric developing, the tool adapts to the user's mental models.</p>
                         <p>Affordances & Signifiers: Theoretical look at how objects "tell" a user how to interact (e.g., a button that looks clickable vs. a hidden gesture).</p>
                         <p>The Three Pillars:</p>
                         <ul>
@@ -120,23 +128,25 @@
                 <div class="indicator purple-glow"></div>
                 <div class="card">
                     <div class="content-area">
-                        <h4><b>II. Identifying the Core Objective (25 Minutes)</b></h4>
-                        <p><b>Students must choose their path.</b> A "device" for art is built differently than one for a product launch.</p>
-                        <p><b>The Creative Brief:</b> Students define their project's primary goal.</p>
-                        <p><b>Artistic:</b> Focus on emotion and unconventional interaction.</p>
-                        <p><b>In the realm of artistic interactive devices,</b> the developer moves beyond traditional utility to prioritize emotional resonance and poetic engagement.</p>
-                        <p><b>Unlike commercial apps that seek the path of least resistance,</b> artistic devices often employ unconventional interaction - using sensors, bio-data, or abstract physics - to challenge the user's expectations and create a sense of wonder or introspection.</p>
-                        <p><b>The "User-at-the-Center" philosophy</b> here focuses on how the person feels while interacting with the medium; the code serves as a bridge between a physical gesture and a digital metaphor.</p>
-                        <p><b>Entertainment:</b> Focus on "The Loop" (Challenge → Action → Reward).</p>
-                        <p><b>Promotion:</b> Focus on clarity, brand identity, and the "Call to Action."</p>
-                        <p><b>In the context of entertainment,</b> putting the user at the center means mastering the Engagement Loop, a psychological cycle designed to keep the participant in a state of "flow."</p>
-                        <p><b>This loop hinges on a clear,</b> repeating sequence: a Challenge is presented (an obstacle, a puzzle, or a goal), the user performs an Action (a jump, a strategic choice, or a physical gesture), and the system provides an immediate, satisfying Reward (visual effects, progress, or points).</b></p>
-                        <p><b>Unlike artistic devices that may embrace ambiguity, </b>entertainment-focused devices must provide high-clarity feedback to ensure the user feels powerful and competent.</p>
-                        <p><b>The developer's goal</b> is to balance the difficulty of the challenge with the user's skill level, ensuring that the interaction feels like a "dialogue" where every input from the user results in a meaningful and entertaining output from the machine.</b></p>
-                        <p><b>Target Audience Personas: </b>Briefly defining who the "User" is. Are they tech-savvy gamers or casual museum visitors?</p>
-                        <p><b>Defining a Target Audience Persona</b> is the process of creating a "fictional profile" of your ideal user to guide every design decision.</p>
-                        <p><b>In a 30-hour sprint,</b> this prevents junior developers from building for "everyone" and instead focuses them on specific needs: a tech-savvy gamer expects high-speed responsiveness, complex controls, and deep systems, whereas a casual museum visitor may only have 60 seconds to interact and requires an interface that is instantly intuitive without a tutorial.</p>
-                        <p><b>By identifying the user's age,</b> tech-literacy, and physical environment (e.g., a quiet home vs. a noisy public gallery), students can tailor the ergonomics and aesthetic quality of their device - ensuring the interaction feels natural rather than frustrating for that specific individual.</p>
+                        <h4><b>2. Identifying the Core Objective </b></h4>
+                        <ul>
+                        <li><b>Students must choose their path.</b> A "device" for art is built differently than one for a product launch.</li>
+                        <li><b>The Creative Brief:</b> You need to define your project's primary goal.</li>
+                        <li><b>Artistic:</b> Focus on emotion and unconventional interaction.</li>
+                        <li><b>In the realm of artistic interactive devices,</b> the developer moves beyond traditional utility to prioritize emotional resonance and poetic engagement.</li>
+                        <li><b>Unlike commercial apps that seek the path of least resistance,</b> artistic devices often employ unconventional interaction - using sensors, bio-data, or abstract physics - to challenge the user's expectations and create a sense of wonder or introspection.</li>
+                        <li><b>The "User-at-the-Center" philosophy</b> here focuses on how the person feels while interacting with the medium; the code serves as a bridge between a physical gesture and a digital metaphor.</li>
+                        <li><b>Entertainment:</b> Focus on "The Loop" (Challenge → Action → Reward).</li>
+                        <li><b>Promotion:</b> Focus on clarity, brand identity, and the "Call to Action."</li>
+                        <li><b>In the context of entertainment,</b> putting the user at the center means mastering the Engagement Loop, a psychological cycle designed to keep the participant in a state of "flow."</li>
+                        <li><b>This loop hinges on a clear,</b> repeating sequence: a Challenge is presented (an obstacle, a puzzle, or a goal), the user performs an Action (a jump, a strategic choice, or a physical gesture), and the system provides an immediate, satisfying Reward (visual effects, progress, or points).</li>
+                        <li><b>Unlike artistic devices that may embrace ambiguity, </b>entertainment-focused devices must provide high-clarity feedback to ensure the user feels powerful and competent.</li>
+                        <li><b>The developer's goal</b> is to balance the difficulty of the challenge with the user's skill level, ensuring that the interaction feels like a "dialogue" where every input from the user results in a meaningful and entertaining output from the machine.</li>
+                        <li><b>Target Audience Personas: </b>Briefly defining who the "User" is. Are they tech-savvy gamers or casual museum visitors?</li>
+                        <li><b>Defining a Target Audience Persona</b> is the process of creating a "fictional profile" of your ideal user to guide every design decision.</li>
+                        <li><b>In a 30-hour sprint,</b> this prevents junior developers from building for "everyone" and instead focuses them on specific needs: a tech-savvy gamer expects high-speed responsiveness, complex controls, and deep systems, whereas a casual museum visitor may only have 60 seconds to interact and requires an interface that is instantly intuitive without a tutorial.</li>
+                        <li><b>By identifying the user's age,</b> tech-literacy, and physical environment (e.g., a quiet home vs. a noisy public gallery), you can tailor the ergonomics and aesthetic quality of your device - ensuring the interaction feels natural rather than frustrating for that specific individual.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -145,7 +155,7 @@
                 <div class="indicator green-glow"></div>
                 <div class="card">
                     <div class="content-area">
-                        <h4><b>III. Interaction Mapping (30 Minutes)</b></h4>
+                        <h4><b>3. Interaction Mapping </b></h4>
                         <p><b>Before drawing screens, we map the User Journey.</b></p>
                         <p><b>The Entry Point: </b>How does the user know the device is interactive?</p>
                         <p><b>The Interaction Loop: </b>Action: User moves, clicks, or speaks.</p>
@@ -159,9 +169,9 @@
                 <div class="indicator blue-glow"></div>
                 <div class="card">
                     <div class="content-area">
-                        <h4><b>IV. Professional Issue: Scope vs. Vision (15 Minutes)</b></h4>
+                        <h4><b>4. Professional Issue: Scope vs. Vision </b></h4>
                         <p>A "Professional Issue" discussion on Feasibility.</p>
-                        <p><b>The Developer's Trap: </b>Junior devs often over-promise features (e.g., "A full VR RPG") and under-deliver on quality.</p>
+                        <p><b>The Developer's Trap: </b>Junior developers often over-promise features (e.g., "A full VR RPG") and under-deliver on quality.</p>
                         <p><b>The "One-In, One-Out" Rule: </b>If you add a complex interaction (like voice recognition), you must simplify another area (like 3D assets) to maintain the 30-hour timeline.</p>
                     </div>
                 </div>
@@ -172,46 +182,19 @@
                 <div class="card">
                     <div class="content-area">
                         <h4><b>Summary of Part 1 Deliverable</b></h4>
-                        <p>By the end of this 1.5-hour block, students will have a One-Page Concept Sheet containing:</p>
+                        <p>Today, our discussion mentioned some types of devices:</p>
                         <ul>
-                            <li>A 1-sentence "User Mission."</li>
-                            <li>A chosen tech stack (VR, 2D, or Immersive 3D).</li>
-                            <li>A rough "Journey Map" showing the start, middle, and end of the interaction.</li>
+                            <li>artistic devices</li>
+                            <li>commercial devices</li>
+                            <li>entertainment focus devices</li>
+                        </ul>
+                        <p>And two types of users:</p>
+                        <ul>
+                            <li>Tech savvy gamers</li>
+                            <li>Casual museum visitor</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-
-            <div class="lesson-item">
-                <div class="indicator green-glow"></div>
-                <div class="card">
-                    <div class="content-area">
-                        <h4><b>Recommended Software Stack</b></h4>
-                        <p>Regarding the software, because this course (SAE) allows for experimentation with different technologies (VR, 2D/3D games, immersive devices), the "stack" depends on the student's chosen path. Here are the recommended industry-standard tools:</p>
-                        <h5>1. Development & Engines (The Core)</h5>
-                        <ul>
-                            <li><b>Unity or Unreal Engine: </b>The industry standards for 3D, Virtual Reality, and immersive devices. Unity is often preferred for junior developers due to its large documentation library.</li>
-                            <li><b>Visual Studio / VS Code: </b>For scripting (C# for Unity, C++ for Unreal).</li>
-                            <li><b>Web Stack (Three.js / React Three Fiber): </b>If students prefer developing browser-based interactive 3D experiences.</li>
-                        </ul>
-                        <h5>2. Design & Prototyping (The Aesthetics)</h5>
-                        <ul>
-                            <li><b>Figma: </b>Essential for designing 2D interfaces (UI), mapping the user journey, and creating clickable wireframes before coding.</li>
-                            <li><b>Blender: </b>The go-to free software for creating 3D models and environments.</li>
-                            <li><b>Adobe Creative Cloud (Photoshop/Illustrator): </b>For textures, UI assets, and promotional graphics.</li>
-                        </ul>
-                        <h5>3. Audio & Interaction</h5>
-                        <ul>
-                            <li><b>Audacity or Reaper: </b>For recording and editing "feedback" sounds (clicks, ambient hums, etc.).</li>
-                            <li><b>Pure Data (Pd) or Max/MSP: </b>For students pursuing more "artistic" or experimental sound-based interactivity.</li>
-                        </ul>
-                        <h5>4. Professional Workflow</h5>
-                        <ul>
-                            <li>Git / GitHub: Essential for version control, allowing students to experiment without the risk of permanently breaking their code.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                </div> 
         </div>
     </div>
     <script src="Designing an interactive device.js"></script>
