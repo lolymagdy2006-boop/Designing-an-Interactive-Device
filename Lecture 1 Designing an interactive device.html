@@ -66,6 +66,63 @@
         li {
             margin-bottom: 10px;   /* Adds space between each list item; adjust as needed */
        }
+
+               .quiz-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .quiz-question {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .quiz-question h4 {
+            margin: 0 0 10px 0;
+            color: white;
+        }
+        .quiz-question ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .quiz-question li {
+            background-color: #34495e;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .quiz-question li:hover {
+            background-color: #4a6a8a;
+        }
+        .quiz-answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #27ae60;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .show-answer-btn {
+            background-color: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .show-answer-btn:hover {
+            background-color: var(--accent-cyan);
+        }
     </style>
 </head>
 <body>
@@ -195,6 +252,135 @@
                         </ul>
                     </div>
                 </div> 
+
+<div class="quiz-section">
+    <h3>Test Your Knowledge</h3>
+    <div class="quiz-item">
+        <div class="quiz-question">
+            <h4>Q1 – MCQ: What are the Three Pillars of a successful interactive experience?</h4>
+            <ul>
+                <li>A) Speed, Cost, Innovation</li>
+                <li>B) Utility, Usability, Desirability</li>
+                <li>C) Design, Code, Testing</li>
+                <li>D) Functionality, Graphics, Sound</li>
+            </ul>
+        </div>
+        <button class="show-answer-btn" type="button" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">Show Answer</button>
+        <p class="quiz-answer">Answer: B</p>
+    </div>
+    <div class="quiz-item">
+        <div class="quiz-question">
+            <h4>Q2 – MCQ (HOW question): How do artistic devices often create unconventional interaction compared to commercial apps?</h4>
+            <ul>
+                <li>A) By simplifying all interactions</li>
+                <li>B) By using sensors, bio-data, or abstract physics</li>
+                <li>C) By removing user control</li>
+                <li>D) By focusing only on efficiency</li>
+            </ul>
+        </div>
+        <button class="show-answer-btn" type="button" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">Show Answer</button>
+        <p class="quiz-answer">Answer: B</p>
+    </div>
+    <div class="quiz-item">
+        <div class="quiz-question">
+            <h4>Q3 – MCQ (WHY question): Why do artistic devices use unconventional interactions?</h4>
+            <ul>
+                <li>A) To reduce development time</li>
+                <li>B) To copy commercial apps</li>
+                <li>C) To challenge expectations and create wonder or introspection</li>
+                <li>D) To make navigation easier</li>
+            </ul>
+        </div>
+        <button class="show-answer-btn" type="button" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">Show Answer</button>
+        <p class="quiz-answer">Answer: C</p>
+    </div>
+    <div class="quiz-item">
+        <div class="quiz-question">
+            <h4>Q4 – True / False: Entertainment-focused experiences rely on “The Loop” (Challenge → Action → Reward).</h4>
+            <ul>
+                <li>True</li>
+                <li>False</li>
+            </ul>
+        </div>
+        <button class="show-answer-btn" type="button" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">Show Answer</button>
+        <p class="quiz-answer">Answer: True</p>
+    </div>
+    <div class="quiz-item">
+        <div class="quiz-question">
+            <h4>Q5 – True / False: Balancing challenge difficulty with the user’s skill level helps the interaction feel like a meaningful dialogue between user and machine.</h4>
+            <ul>
+                <li>True</li>
+                <li>False</li>
+            </ul>
+        </div>
+        <button class="show-answer-btn" type="button" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">Show Answer</button>
+        <p class="quiz-answer">Answer: True</p>
+    </div>
+    <div class="quiz-item">
+        <div class="quiz-question">
+            <h4>Q6 – MCQ: What does defining a Target Audience Persona mean?</h4>
+            <ul>
+                <li>A) Creating a real user survey</li>
+                <li>B) Designing for everyone</li>
+                <li>C) Creating a fictional profile of the ideal user to guide design decisions</li>
+                <li>D) Writing technical documentation</li>
+            </ul>
+        </div>
+        <button class="show-answer-btn" type="button" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">Show Answer</button>
+        <p class="quiz-answer">Answer: C</p>
+    </div>
+    <div class="quiz-item">
+        <div class="quiz-question">
+            <h4>Q7 – MCQ: Which comes FIRST in Interaction Mapping?</h4>
+            <ul>
+                <li>A) The Interaction Loop</li>
+                <li>B) The Exit Point</li>
+                <li>C) Drawing screens</li>
+                <li>D) The Entry Point (How the user knows it’s interactive)</li>
+            </ul>
+        </div>
+        <button class="show-answer-btn" type="button" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">Show Answer</button>
+        <p class="quiz-answer">Answer: D</p>
+    </div>
+    <div class="quiz-item">
+        <div class="quiz-question">
+            <h4>Q8 – MCQ: What does the “One-In, One-Out” rule help developers manage?</h4>
+            <ul>
+                <li>A) User feedback</li>
+                <li>B) Visual aesthetics</li>
+                <li>C) Scope vs. Vision within feasibility and time limits</li>
+                <li>D) Marketing strategy</li>
+            </ul>
+        </div>
+        <button class="show-answer-btn" type="button" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">Show Answer</button>
+        <p class="quiz-answer">Answer: C</p>
+    </div>
+    <div class="quiz-item">
+        <div class="quiz-question">
+            <h4>Ninth Question — MCQ: In user-centric design, what does “Affordances & Signifiers” refer to? (Affordances & Signifiers are how objects “tell” a user how to interact with them, like a button that looks clickable.)</h4>
+            <ul>
+                <li>A) The device’s power consumption and battery life</li>
+                <li>B) How objects communicate what actions they allow to the user</li>
+                <li>C) How fast a user completes a task</li>
+                <li>D) The project timeline and budget</li>
+            </ul>
+        </div>
+        <button class="show-answer-btn" type="button" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">Show Answer</button>
+        <p class="quiz-answer">Answer: B</p>
+    </div>
+    <div class="quiz-item">
+        <div class="quiz-question">
+            <h4>Tenth Question — True / False: In the user-first philosophy, the tool adapts to the user’s mental models, not the other way around.</h4>
+            <ul>
+                <li>True</li>
+                <li>False</li>
+            </ul>
+        </div>
+                                <button class="show-answer-btn" type="button" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">Show Answer</button>
+                                <p class="quiz-answer">Answer: True</p>
+    </div>
+</div>
+
         </div>
     </div>
     <script src="Designing an interactive device.js"></script>
